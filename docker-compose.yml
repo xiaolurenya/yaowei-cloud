@@ -1,19 +1,29 @@
 services:
   yaowei-cloud:
-    image: ${DOCKERHUB_USER:-xiaoluya}/yaowei-cloud-suite:latest
+    image: xiaoluya/yaowei-cloud-suite:5.0.13@sha256:f8ac4ab9f512e50faefd561e307a442720d4643d74e29928b40a8477041de06a
     container_name: yaowei-cloud
     restart: unless-stopped
     ports:
       - "8899:80"
     volumes:
-      - "${YAOWEI_DATA_DIR:-./data}:/app/data"
+      - ./data:/app/data
     environment:
       TZ: Asia/Shanghai
+      PORT: "80"
       YAOWEI_LICENSE_ENDPOINT: "https://ywy.xlry.cc.cd"
       YAOWEI_LICENSE_SKU: "yaowei-cloud-suite"
       YAOWEI_LICENSE_OFFLINE_GRACE_DAYS: "7"
+      YAOWEI_TRIAL_DAYS: "7"
       YAOWEI_LICENSE_ALLOW_LOCAL: "0"
       YAOWEI_LICENSE_REQUIRE_EXPORT: "1"
       YAOWEI_LICENSE_REQUIRE_IMPORT: "1"
       YAOWEI_STATE_AUTOSAVE: "1"
       YAOWEI_STATE_FILE: "/app/data/state.json"
+      YAOWEI_LICENSE_STATE_FILE: "/app/data/license-state.json"
+      YAOWEI_TRIAL_FILE: "/app/data/trial.json"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
