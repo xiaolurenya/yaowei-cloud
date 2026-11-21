@@ -9,6 +9,15 @@
 xiaoluya/yaowei-cloud-suite:latest
 ```
 
+固定版本：
+```text
+xiaoluya/yaowei-cloud-suite:v5.0.0
+```
+
+当前 digest：`sha256:398aabc2ef7106c0101773c971d0d4cc1c9c560df17afad8cf78abe3010f9854`
+```
+```
+
 ## 一键启动
 ```bash
 chmod +x scripts/pull-and-run.sh
@@ -22,7 +31,12 @@ docker compose up -d
 
 访问：`http://localhost:8899` 或 `http://NAS的IP:8899`。
 
-## 授权
+## 授权平台
+- Cloudflare Worker：`yaowei-license-hub`
+- 地址：<https://yaowei-license-hub.435675554-57b.workers.dev>
+- 公网部署由 `YAOWEI_LICENSE_ENDPOINT` 注入；局域网默认离线可用。
+
+## 客户端授权
 局域网 / 127.0.0.1 / 192.168.x.x 默认离线可用。公网部署设置：
 ```bash
 YAOWEI_LICENSE_ENDPOINT=https://yaowei-license-hub.435675554-57b.workers.dev
