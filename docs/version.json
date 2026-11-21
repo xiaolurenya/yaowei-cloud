@@ -1,9 +1,9 @@
 {
-  "version": "5.0.13",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.13",
+  "version": "5.0.15",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.15",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.13",
-  "digest": "sha256:f8ac4ab9f512e50faefd561e307a442720d4643d74e29928b40a8477041de06a",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.15",
+  "digest": "sha256:fbeb02802805d2898f7cf2f021e70b354e4fc41eae3042b4cf034c6c8b30b6ae",
   "license_endpoint": "[built-in]",
   "license_admin_path": "[private]",
   "license_admin_password": "管理端使用独立密码登录；密码不写入公开仓/镜像",
@@ -12,7 +12,7 @@
   "publicConfig": "授权后台可配置价格与联系方式，前台授权弹窗打开时实时读取并在30秒轮询刷新",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T11:20:19.053Z",
-  "note": "曜维云 V5.0.13：固化云端授权安全增强；未激活只显示默认 SKU，激活后才显示客户独立 SKU；保留吊销复位与服务端授权备份。",
+  "generatedAt": "2026-11-21T12:49:04.957Z",
+  "note": "曜维云 V5.0.15：业务场景开关实际生效、首页快捷开单、流程开关运行自检、新建业务类型跟随场景。",
   "trial": "7天服务端试用期；试用期可关闭授权窗口并使用业务功能"
 }
