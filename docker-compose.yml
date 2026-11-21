@@ -9,7 +9,7 @@ services:
       - "${YAOWEI_DATA_DIR:-./data}:/app/data"
     environment:
       TZ: Asia/Shanghai
-      YAOWEI_LICENSE_ENDPOINT: "https://ywyt.xlry.cc.cd"
+      YAOWEI_LICENSE_ENDPOINT: "https://ywy.xlry.cc.cd"
       YAOWEI_LICENSE_SKU: "yaowei-cloud-suite"
       YAOWEI_LICENSE_OFFLINE_GRACE_DAYS: "7"
       YAOWEI_LICENSE_ALLOW_LOCAL: "0"
