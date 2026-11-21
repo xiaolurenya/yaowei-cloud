@@ -1,9 +1,9 @@
 {
-  "version": "5.0.9",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.9",
+  "version": "5.0.10",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.10",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.9",
-  "digest": "sha256:2832a9dd75009a41bf8c6befed1525e30f8e586727e0d94186ee58decc53cda2",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.10",
+  "digest": "sha256:f0b3895b348fe4aae4dc133f13823b76b555ed7aaf0591a9e05d249cb9cfc4e3",
   "license_endpoint": "[built-in]",
   "license_admin_path": "[private]",
   "license_admin_password": "管理端使用独立密码登录；密码不写入公开仓/镜像",
@@ -12,7 +12,7 @@
   "publicConfig": "授权后台可配置价格与联系方式，前台授权弹窗打开时实时读取并在30秒轮询刷新",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T09:57:20.399Z",
-  "note": "曜维云 V5.0.9：登录页增加默认账号 admin / admin123 提示；保留设置未授权提示可点击、7天试用与永久授权发码。",
+  "generatedAt": "2026-11-21T10:24:44.339Z",
+  "note": "曜维云 V5.0.10：修复激活成功后刷新页面变未激活；保存真实独立SKU并按token内SKU校验；授权后台记录表与设备吊销。",
   "trial": "7天服务端试用期；试用期可关闭授权窗口并使用业务功能"
 }
