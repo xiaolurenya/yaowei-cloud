@@ -1,9 +1,9 @@
 {
-  "version": "5.0.15",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.15",
+  "version": "5.0.16",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.16",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.15",
-  "digest": "sha256:fbeb02802805d2898f7cf2f021e70b354e4fc41eae3042b4cf034c6c8b30b6ae",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.16",
+  "digest": "sha256:754820096b85d1355cfe4e5028a1835545e79680f6a95e160fa72537593882bf",
   "license_endpoint": "[built-in]",
   "license_admin_path": "[private]",
   "license_admin_password": "管理端使用独立密码登录；密码不写入公开仓/镜像",
@@ -12,7 +12,7 @@
   "publicConfig": "授权后台可配置价格与联系方式，前台授权弹窗打开时实时读取并在30秒轮询刷新",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T12:49:04.957Z",
-  "note": "曜维云 V5.0.15：业务场景开关实际生效、首页快捷开单、流程开关运行自检、新建业务类型跟随场景。",
+  "generatedAt": "2026-11-21T13:08:28.251Z",
+  "note": "曜维云 V5.0.16：业务场景配置页直接显示当前场景可用入口，开启后无需切换首页即可看到并点击。",
   "trial": "7天服务端试用期；试用期可关闭授权窗口并使用业务功能"
 }
