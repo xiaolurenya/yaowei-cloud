@@ -1,13 +1,14 @@
 {
-  "version": "5.0.1",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.1",
+  "version": "5.0.2",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.2",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.1",
-  "digest": "sha256:94631e9a8931f2a52648338721109c5a3f58b5602c1c28b885ab0d97e84d4d44",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.2",
+  "digest": "sha256:c86f66b1d3dd6e969327dd69b30174842834d907f19142537c45e5ab2c7c6869",
   "license_endpoint": "https://yaowei-license-hub.435675554-57b.workers.dev",
   "license_admin_path": "/admin",
+  "security": "云端授权默认强制；局域网免授权默认关闭；导出/导入需授权；导出的账套不含授权 token",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T06:56:00.000Z",
-  "note": "曜维云 V5.0.1：授权管理页、Worker 根路径/ /admin、Docker 静态资源权限修复、Docker Hub 最新镜像。"
+  "generatedAt": "2026-11-21T07:20:22.956Z",
+  "note": "曜维云 V5.0.2：修复容器打开卡死、登录页可配置、关闭登录/授权绕过、导出导入授权门禁。"
 }
