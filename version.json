@@ -1,15 +1,17 @@
 {
-  "version": "5.0.3",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.3",
+  "version": "5.0.4",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.4",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.3",
-  "digest": "sha256:937ed29578cbc76fcc6a7e4cc95f02443cd061501e1a4c98998fffb782e1c570",
-  "license_endpoint": "https://ywyt.xlry.cc.cd",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.4",
+  "digest": "sha256:b5b63256b274ad1c4f8e9734f37bf53cb2633919c2d2867cb055be6fcdbf9ab5",
+  "license_endpoint": "https://ywy.xlry.cc.cd",
   "license_admin_path": "/admin",
+  "license_admin_password": "管理端使用独立密码登录；密码不写入公开仓/镜像",
   "persistence": "NAS 持久数据卷 /app/data/state.json + /api/state 自动保存/恢复；授权 token 不随业务数据导出",
   "security": "云端授权默认强制；局域网免授权默认关闭；导出/导入需授权；导出的账套不含授权 token",
+  "publicConfig": "授权后台可配置价格与联系方式，前台授权弹窗打开时实时读取并在30秒轮询刷新",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T08:05:29.320Z",
-  "note": "曜维云 V5.0.3 最终版：业务数据 NAS 持久化、ywyt 自定义授权域名、登录页可配置、关闭绕过、导出导入授权门禁。"
+  "generatedAt": "2026-11-21T08:28:36.907Z",
+  "note": "曜维云 V5.0.4：授权域名改为 ywy.xlry.cc.cd、授权管理密码保护、后台配置联系方式/价格、飞牛安装可自定义端口。"
 }
