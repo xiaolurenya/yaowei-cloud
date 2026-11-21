@@ -1,64 +1,22 @@
-# 曜维云 V5.0 产品化 / 授权 / 发布结果（已完成）
+# 曜维云 V5.0.2 发布结果
 
-## 一、品牌与仓库
-- 产品：曜维云 · 弱电工程经营平台
-- 公司：曜维云科技有限公司
-- 私有核心源码仓：<https://github.com/xiaolurenya/yaowei-cloud-core>
-- 公开介绍 / 镜像拉取仓：<https://github.com/xiaolurenya/yaowei-cloud>
-- Docker 镜像：`xiaoluya/yaowei-cloud-suite`
-- 授权平台：`YaoWei License Hub`
+## 本次修复
+- 修复容器通过 IP 打开后主界面卡死：授权 UI 的 MutationObserver 改为 requestAnimationFrame 节流，并避免反复写相同 DOM；实时刷新从 1.8 秒降到 5 秒，弹窗/授权遮罩期间暂停实时刷新。
+- 登录页信息全部可在「系统设置」配置：公司名称、登录页主标题、说明、版本标签、品牌英文小字、流程标签、底部标签。
+- 关闭登录绕过：\u0060?demo=1\u0060 不再自动登录，移除「进入现场端」无需密码入口，登录页不再显示默认账号密码。
+- 授权默认改为云端强制：所有公网/局域网生产部署都要求逐设备激活；局域网免授权默认关闭，只有显式设置 \u0060YAOWEI_LICENSE_ALLOW_LOCAL=1\u0060 才作为本机演示放行。
+- 防止导出账套到 B 设备自动激活：导出的账套本来不含 \u0060yaowei-license-v1\u0060 token；现在 B 设备默认不会因局域网 IP 自动有效，导入/导出也要求当前设备已授权。
+- 导出/导入增加授权门禁：未授权时调用 \u0060assertExport()\u0060 / \u0060assertImport()\u0060 会被拦截并弹出激活界面。
+- 公开仓仍只含介绍、compose、部署脚本、文档和 version.json；核心源码、授权 Worker 源码、私钥、管理令牌均不公开。
 
-## 二、授权系统
-前端已集成：
-- `license-config.js`：容器启动时由 `deploy/docker/entrypoint.sh` 动态注入授权平台地址；
-- `license.js`：局域网离线授权、云端激活、授权校验、设备解绑、7 天离线宽限、MutationObserver 自动挂载授权入口；
-- `license.css`：授权弹窗、设置页授权管理面板、顶栏「授」状态按钮；
-- 局域网 / localhost / 127.0.0.1 / 192.168.x.x 默认离线可用；
-- 公网部署通过 `YAOWEI_LICENSE_ENDPOINT` 指向 Cloudflare License Hub；
-- 授权状态与 token 保存在浏览器 localStorage。
+## 镜像
+- \u0060xiaoluya/yaowei-cloud-suite:latest\u0060
+- \u0060xiaoluya/yaowei-cloud-suite:v5.0.2\u0060
+- digest：\u0060sha256:c86f66b1d3dd6e969327dd69b30174842834d907f19142537c45e5ab2c7c6869\u0060
 
-## 三、Cloudflare 授权平台
-- Worker：`yaowei-license-hub`
-- KV namespace：`yaowei-license-hub`（ID：`5e9cd7637bae4250ac5921dbcab4a04f`）
-- 部署地址：<https://yaowei-license-hub.435675554-57b.workers.dev>
-- 接口：`/health`、`/activate`、`/verify`、`/deactivate`、`/admin/issue`、`/admin/revoke`、`/admin/list`
-- 管理员发码脚本：`deploy/scripts/issue-license.sh`
-- 本执行环境对 workers.dev 公网访问超时；Cloudflare KV namespace 与本地 deploy-result 记录存在，实际公网健康检查建议在外网机器复核。
-
-## 四、Docker Hub 发布（已完成）
-- 镜像：`xiaoluya/yaowei-cloud-suite:latest`
-- 版本 tag：`xiaoluya/yaowei-cloud-suite:v5.0.0`
-- digest：`sha256:398aabc2ef7106c0101773c971d0d4cc1c9c560df17afad8cf78abe3010f9854`
-- 本地构建图像 ID：`7dfe1f2c9388`
-- 本地容器验证：
-  - `/health` 返回 `{"ok":true,"service":"yaowei-cloud-suite"}`
-  - `/index.html` 加载 `license.css` / `license-config.js` / `license.js` / `app.js`
-  - 容器启动时 `license-config.js` 正确注入 `YAOWEI_LICENSE_ENDPOINT`
-
-## 五、GitHub 发布
-- 公开仓 `yaowei-cloud`：README、docker-compose、部署文档、拉取脚本、发布状态、version.json、校验 workflow
-- 私有源码仓 `yaowei-cloud-core`：静态 SPA 源码、Dockerfile、nginx 配置、CF Worker、授权前端、发码脚本、CI、测试与截图
-- 通过 GitHub REST Contents API 定向推送；不输出任何 token 或密钥
-
-## 六、回归验证
-- `node --check app.js` 通过
-- `node --check license.js` 通过
-- `node --check app/app.js` 通过
-- `node --check app/license.js` 通过
-- `node --check deploy/license-worker/src.js` 通过
-- Docker 构建通过
-- 本地容器 `/health` 与授权配置注入通过
-- Docker Hub `latest` / `v5.0.0` 推送成功
-
-## 七、部署命令
-```bash
-docker pull xiaoluya/yaowei-cloud-suite:latest
-docker compose up -d
-```
-
-或固定 digest：
-```text
-xiaoluya/yaowei-cloud-suite@sha256:398aabc2ef7106c0101773c971d0d4cc1c9c560df17afad8cf78abe3010f9854
-```
-
-访问：`http://NAS的IP:8899`。公网部署如需云端授权，保留 compose 中的 `YAOWEI_LICENSE_ENDPOINT`。
+## 验证
+- \u0060docker pull xiaoluya/yaowei-cloud-suite:latest\u0060 本地运行通过。
+- \u0060/index.html\u0060 HTTP 200；\u0060/health\u0060 正常。
+- 默认严格模式：\u0060?demo=1\u0060 不再进入系统；出现授权遮罩；\u0060assertExport()=false\u0060；无 JS 错误。
+- \u0060YAOWEI_LICENSE_ALLOW_LOCAL=1\u0060 演示模式：可登录并进入设置页；登录页配置项、授权管理面板均存在。
+- 公开仓 GitHub 树核验：核心源码/激活代码文件数为 0。
