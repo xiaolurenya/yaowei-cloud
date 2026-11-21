@@ -1,6 +1,6 @@
 services:
   yaowei-cloud:
-    image: xiaoluya/yaowei-cloud-suite:v5.0.17@sha256:1bed3a81d7355c5f789b2f599bb7a7fa31ff9b3f054ebdb4c963e360e96dac3e
+    image: xiaoluya/yaowei-cloud-suite:v5.0.18@sha256:f334605b352a5d29c2a5fc5ee1d6a9c6443a561a7aa8807117495057ad4bc968
     container_name: yaowei-cloud
     restart: unless-stopped
     ports:
