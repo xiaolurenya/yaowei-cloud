@@ -13,10 +13,10 @@ xiaoluya/yaowei-cloud-suite:latest
 固定版本：
 
 ```text
-xiaoluya/yaowei-cloud-suite:v5.0.5
+xiaoluya/yaowei-cloud-suite:v5.0.6
 ```
 
-当前 digest：`sha256:a044f4eef9f1ba91f452e1fb810a50953c55b79f9161e38125a41d978cc90d94`
+当前 digest：`sha256:8cb5aabc6000bc24f4366025c6e0c0d571b52ff423ccdd7a05005578bd8ed993`
 
 ## 一键启动
 
@@ -37,12 +37,19 @@ docker compose up -d
 
 业务数据保存到 `YaoWeiCloud/data/state.json`，升级/重装容器不会删除；不要执行 `docker compose down -v`。
 
-- 版本：v5.0.5
-- 文件：`YaoWeiCloud-5.0.5-Feiniu.fpk`
-- 镜像 digest：`sha256:a044f4eef9f1ba91f452e1fb810a50953c55b79f9161e38125a41d978cc90d94`
-- 下载：[GitHub Releases / v5.0.5](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.5)
+- 版本：v5.0.6
+- 文件：`YaoWeiCloud-5.0.6-Feiniu.fpk`
+- 镜像 digest：`sha256:8cb5aabc6000bc24f4366025c6e0c0d571b52ff423ccdd7a05005578bd8ed993`
+- 下载：[GitHub Releases / v5.0.6](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.6)
 
 安装后访问 `http://设备IP:8899`。安装向导可自定义访问端口，默认 8899。
+
+## 试用与授权
+
+- 首次安装提供 7 天试用期；
+- 试用版不可修改公司名称与登录页信息；
+- 授权提示可关闭，激活后解除限制；
+- 业务数据保存在 NAS 持久卷。
 
 ## 功能
 
