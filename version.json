@@ -1,9 +1,9 @@
 {
-  "version": "5.0.17",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.17",
+  "version": "5.0.18",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.18",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.17",
-  "digest": "sha256:1bed3a81d7355c5f789b2f599bb7a7fa31ff9b3f054ebdb4c963e360e96dac3e",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.18",
+  "digest": "sha256:f334605b352a5d29c2a5fc5ee1d6a9c6443a561a7aa8807117495057ad4bc968",
   "license_endpoint": "[built-in]",
   "license_admin_path": "[private]",
   "license_admin_password": "管理端使用独立密码登录；密码不写入公开仓/镜像",
@@ -12,7 +12,7 @@
   "publicConfig": "授权后台可配置价格与联系方式，前台授权弹窗打开时实时读取并在30秒轮询刷新",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T13:24:03.612Z",
-  "note": "曜维云 V5.0.17：场景配置页即时入口，内置授权服务配置，公开文档不再暴露授权平台地址。",
+  "generatedAt": "2026-11-21T13:42:01.816Z",
+  "note": "曜维云 V5.0.18：每个业务场景拥有独立工作台、匹配流程、开单按钮与本场景单据表。",
   "trial": "7天服务端试用期；试用期可关闭授权窗口并使用业务功能"
 }
