@@ -1,0 +1,12 @@
+name: Validate Public Bundle
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          test -f README.md
+          test -f docker-compose.yml
+          test -f scripts/pull-and-run.sh
+          bash -n scripts/pull-and-run.sh
