@@ -2,7 +2,7 @@
 
 > 把报价、合同、成本、库存、回款、现场工单和经营驾驶舱，装进一个弱电工程经营平台。
 
-![版本](https://img.shields.io/badge/version-v5.0.18-blue) ![类型](https://img.shields.io/badge/type-%E5%BC%B1%E7%94%B5%E5%B7%A5%E7%A8%8B%E7%BB%8F%E8%90%A5%E5%B9%B3%E5%8F%B0-orange) ![技术](https://img.shields.io/badge/stack-Node.js%20%2F%20SPA%20%2F%20Cloudflare%20Workers-green) ![端口](https://img.shields.io/badge/port-8899-lightgrey)
+![版本](https://img.shields.io/badge/version-v5.0.19-blue) ![类型](https://img.shields.io/badge/type-%E5%BC%B1%E7%94%B5%E5%B7%A5%E7%A8%8B%E7%BB%8F%E8%90%A5%E5%B9%B3%E5%8F%B0-orange) ![技术](https://img.shields.io/badge/stack-Node.js%20%2F%20SPA%20%2F%20Cloudflare%20Workers-green) ![端口](https://img.shields.io/badge/port-8899-lightgrey)
 
 曜维云是一套面向**弱电工程商、机电承包商、系统集成商和项目服务商**的本地化经营平台。它把经营驾驶舱、实时大屏、报价配置、合同文档、项目施工、采购库存、回款财务、成本利润、现场工单、业务场景、导出中心和授权系统整合为一套轻量私有部署方案。
 
@@ -52,8 +52,8 @@
 ## 镜像与版本
 
 - Docker Hub：<https://hub.docker.com/r/xiaoluya/yaowei-cloud-suite>
-- 固定版本：`xiaoluya/yaowei-cloud-suite:v5.0.18`
-- 当前 digest：`sha256:f334605b352a5d29c2a5fc5ee1d6a9c6443a561a7aa8807117495057ad4bc968`
+- 固定版本：`xiaoluya/yaowei-cloud-suite:v5.0.19`
+- 当前 digest：`sha256:23f2844d7af9aaf5963e8fa6deb06f857cbfa0d1c7fd64bf3d7b170dae4df90d`
 - 默认端口：`8899`
 
 ---
@@ -65,7 +65,7 @@
 ```yaml
 services:
   yaowei-cloud:
-    image: xiaoluya/yaowei-cloud-suite:v5.0.18@sha256:f334605b352a5d29c2a5fc5ee1d6a9c6443a561a7aa8807117495057ad4bc968
+    image: xiaoluya/yaowei-cloud-suite:v5.0.19@sha256:23f2844d7af9aaf5963e8fa6deb06f857cbfa0d1c7fd64bf3d7b170dae4df90d
     container_name: yaowei-cloud
     restart: unless-stopped
     ports:
@@ -130,8 +130,8 @@ admin / admin123
 
 ## 飞牛 NAS 安装包
 
-- [GitHub Releases / v5.0.18](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.18)
-- 附件：`YaoWeiCloud-v5.0.18-Feiniu.fpk`
+- [GitHub Releases / v5.0.19](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.19)
+- 附件：`YaoWeiCloud-v5.0.19-Feiniu.fpk`
 - 安装向导可自定义访问端口，默认 `8899`
 - 业务数据保存到 `YaoWeiCloud/data/state.json`
 - 服务端授权备份保存到 `YaoWeiCloud/data/license-state.json`
@@ -177,4 +177,4 @@ admin / admin123
 
 ---
 
-文档版本：v5.0.18 · 业务场景配置页即时入口、运行自检、内置授权配置、默认 SKU 防护与服务端授权备份。
+文档版本：v5.0.19 · 业务场景配置页即时入口、运行自检、内置授权配置、默认 SKU 防护与服务端授权备份。
