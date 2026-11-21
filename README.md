@@ -49,11 +49,11 @@ YAOWEI_LICENSE_ENDPOINT=https://yaowei-license-hub.435675554-57b.workers.dev
 业务数据保存到 `YaoWeiCloud/data/state.json`，升级/重装容器不会删除；不要执行 `docker compose down -v`。
 
 
-- 版本：v5.0.4
-- 文件：`YaoWeiCloud-5.0.4-Feiniu.fpk`
-- 镜像 digest：`sha256:b5b63256b274ad1c4f8e9734f37bf53cb2633919c2d2867cb055be6fcdbf9ab5`
+- 版本：v5.0.5
+- 文件：`YaoWeiCloud-5.0.5-Feiniu.fpk`
+- 镜像 digest：`sha256:a044f4eef9f1ba91f452e1fb810a50953c55b79f9161e38125a41d978cc90d94`
 - SHA256：`(see Release asset SHA256)`
-- 下载：[GitHub Releases / v5.0.4](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.4)
+- 下载：[GitHub Releases / v5.0.5](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.5)
 
 安装后访问 `http://设备IP:8899`。生产默认强制云端授权；仅内网演示可在 compose 中设置 `YAOWEI_LICENSE_ALLOW_LOCAL=1`。
 
