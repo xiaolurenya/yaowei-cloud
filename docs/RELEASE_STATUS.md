@@ -1,22 +1,24 @@
-# 曜维云 V5.0.2 发布结果
+# 曜维云 V5.0.3 发布结果
 
-## 本次修复
-- 修复容器通过 IP 打开后主界面卡死：授权 UI 的 MutationObserver 改为 requestAnimationFrame 节流，并避免反复写相同 DOM；实时刷新从 1.8 秒降到 5 秒，弹窗/授权遮罩期间暂停实时刷新。
-- 登录页信息全部可在「系统设置」配置：公司名称、登录页主标题、说明、版本标签、品牌英文小字、流程标签、底部标签。
-- 关闭登录绕过：\u0060?demo=1\u0060 不再自动登录，移除「进入现场端」无需密码入口，登录页不再显示默认账号密码。
-- 授权默认改为云端强制：所有公网/局域网生产部署都要求逐设备激活；局域网免授权默认关闭，只有显式设置 \u0060YAOWEI_LICENSE_ALLOW_LOCAL=1\u0060 才作为本机演示放行。
-- 防止导出账套到 B 设备自动激活：导出的账套本来不含 \u0060yaowei-license-v1\u0060 token；现在 B 设备默认不会因局域网 IP 自动有效，导入/导出也要求当前设备已授权。
-- 导出/导入增加授权门禁：未授权时调用 \u0060assertExport()\u0060 / \u0060assertImport()\u0060 会被拦截并弹出激活界面。
-- 公开仓仍只含介绍、compose、部署脚本、文档和 version.json；核心源码、授权 Worker 源码、私钥、管理令牌均不公开。
+## 已完成
+- 业务数据不再只存浏览器 localStorage：镜像内置 Node 静态服务器与 \u0060/api/state\u0060，自动把 \u0060wc-suite-v4\u0060 账套保存到 \u0060/app/data/state.json\u0060。
+- Docker / 飞牛 FPK 增加持久卷 \u0060/app/data\u0060；升级、重装容器后业务数据仍可恢复。
+- 授权平台地址统一切换为 \u0060https://ywyt.xlry.cc.cd/\u0060。
+- 保留 v5.0.2：登录页信息可配置、关闭 \u0060?demo=1\u0060 与「进入现场端」绕过、云端强制授权、导出/导入授权门禁。
+- 导出的账套不含 \u0060yaowei-license-v1\u0060 授权 token；B 设备导入后不会自动激活授权。
 
 ## 镜像
 - \u0060xiaoluya/yaowei-cloud-suite:latest\u0060
-- \u0060xiaoluya/yaowei-cloud-suite:v5.0.2\u0060
-- digest：\u0060sha256:c86f66b1d3dd6e969327dd69b30174842834d907f19142537c45e5ab2c7c6869\u0060
+- \u0060xiaoluya/yaowei-cloud-suite:v5.0.3\u0060
+- digest：\u0060sha256:1558eb7523192e5041bc6b8458e4a9a39ab1c0d01e1516f3626bbdb7bd803235\u0060
 
 ## 验证
-- \u0060docker pull xiaoluya/yaowei-cloud-suite:latest\u0060 本地运行通过。
-- \u0060/index.html\u0060 HTTP 200；\u0060/health\u0060 正常。
-- 默认严格模式：\u0060?demo=1\u0060 不再进入系统；出现授权遮罩；\u0060assertExport()=false\u0060；无 JS 错误。
-- \u0060YAOWEI_LICENSE_ALLOW_LOCAL=1\u0060 演示模式：可登录并进入设置页；登录页配置项、授权管理面板均存在。
-- 公开仓 GitHub 树核验：核心源码/激活代码文件数为 0。
+- \u0060/health\u0060 正常；
+- \u0060/index.html\u0060 HTTP 200；
+- \u0060/license-config.js\u0060 注入 \u0060https://ywyt.xlry.cc.cd\u0060；
+- \u0060POST /api/state\u0060 写入挂载卷 \u0060state.json\u0060；
+- 容器重建后 \u0060GET /api/state\u0060 仍读到原业务数据。
+
+## Cloudflare 域名
+- 软件配置已使用 \u0060https://ywyt.xlry.cc.cd/\u0060。
+- 当前会话中的 Cloudflare API token 对 \u0060workers/domains\u0060 返回 405，对 zone worker routes 返回 403；若域名尚未解析到 Worker，需要具有 Workers Routes / Custom Domains 权限的 token，或在 Cloudflare 后台手动把 \u0060ywyt.xlry.cc.cd/*\u0060 绑定到 \u0060yaowei-license-hub\u0060。
