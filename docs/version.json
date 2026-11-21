@@ -1,11 +1,13 @@
 {
-  "version": "5.0.0",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.0",
+  "version": "5.0.1",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.1",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "digest": "sha256:398aabc2ef7106c0101773c971d0d4cc1c9c560df17afad8cf78abe3010f9854",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.1",
+  "digest": "sha256:94631e9a8931f2a52648338721109c5a3f58b5602c1c28b885ab0d97e84d4d44",
   "license_endpoint": "https://yaowei-license-hub.435675554-57b.workers.dev",
+  "license_admin_path": "/admin",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T06:37:37.697Z",
-  "note": "曜维云 V5.0：授权系统 + Cloudflare License Hub + Docker Hub 镜像发布。"
+  "generatedAt": "2026-11-21T06:56:00.000Z",
+  "note": "曜维云 V5.0.1：授权管理页、Worker 根路径/ /admin、Docker 静态资源权限修复、Docker Hub 最新镜像。"
 }
