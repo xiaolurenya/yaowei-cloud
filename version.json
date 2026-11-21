@@ -1,9 +1,9 @@
 {
-  "version": "5.0.7",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.7",
+  "version": "5.0.8",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.8",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.7",
-  "digest": "sha256:68ab0d7c1789db43ccd25aa6bf0137f462ed242c22de4914eb6f757161a89e16",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.8",
+  "digest": "sha256:604878bda003974c7219b7e3797d4cbafa07f39940ef36f15ff8c663e5987ae1",
   "license_endpoint": "[built-in]",
   "license_admin_path": "[private]",
   "license_admin_password": "管理端使用独立密码登录；密码不写入公开仓/镜像",
@@ -12,7 +12,7 @@
   "publicConfig": "授权后台可配置价格与联系方式，前台授权弹窗打开时实时读取并在30秒轮询刷新",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T09:20:29.783Z",
-  "note": "曜维云 V5.0.7：系统设置增加未授权无法更新系统信息提示；授权后台改为统一永久授权发码。",
+  "generatedAt": "2026-11-21T09:52:18.361Z",
+  "note": "曜维云 V5.0.8：系统设置未授权提示可点击打开授权界面；修复登录页 BR 字面量；保留7天试用与永久授权发码。",
   "trial": "7天服务端试用期；试用期可关闭授权窗口并使用业务功能"
 }
