@@ -46,11 +46,14 @@ YAOWEI_LICENSE_ENDPOINT=https://yaowei-license-hub.435675554-57b.workers.dev
 
 ## 飞牛 NAS 安装包
 
-- 版本：v5.0.2
-- 文件：`YaoWeiCloud-5.0.2-Feiniu.fpk`
-- 镜像 digest：`sha256:c86f66b1d3dd6e969327dd69b30174842834d907f19142537c45e5ab2c7c6869`
-- SHA256：`7879d2c53724480531bb696113f6de69d01bd574f5bc6244622214631bc188fa`
-- 下载：[GitHub Releases / v5.0.2](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.2)
+业务数据保存到 `YaoWeiCloud/data/state.json`，升级/重装容器不会删除；不要执行 `docker compose down -v`。
+
+
+- 版本：v5.0.3
+- 文件：`YaoWeiCloud-5.0.3-Feiniu.fpk`
+- 镜像 digest：`sha256:1558eb7523192e5041bc6b8458e4a9a39ab1c0d01e1516f3626bbdb7bd803235`
+- SHA256：`936ebfe9aac62c3650e1fdaeb8e4e334323b6c33bab156dca4969789f1b95084`
+- 下载：[GitHub Releases / v5.0.3](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.3)
 
 安装后访问 `http://设备IP:8899`。生产默认强制云端授权；仅内网演示可在 compose 中设置 `YAOWEI_LICENSE_ALLOW_LOCAL=1`。
 
