@@ -25,7 +25,7 @@ docker compose up -d
 ## 授权
 局域网 / 127.0.0.1 / 192.168.x.x 默认离线可用。公网部署设置：
 ```bash
-YAOWEI_LICENSE_ENDPOINT=https://license.your-domain.workers.dev
+YAOWEI_LICENSE_ENDPOINT=https://yaowei-license-hub.435675554-57b.workers.dev
 ```
 首次进入「授权管理」输入授权码。
 
