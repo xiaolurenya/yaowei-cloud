@@ -6,6 +6,6 @@ services:
     ports:
       - "8899:80"
     environment:
-      YAOWEI_LICENSE_ENDPOINT: "${YAOWEI_LICENSE_ENDPOINT:-}"
+      YAOWEI_LICENSE_ENDPOINT: "https://yaowei-license-hub.435675554-57b.workers.dev"
       YAOWEI_LICENSE_SKU: "yaowei-cloud-suite"
       YAOWEI_LICENSE_OFFLINE_GRACE_DAYS: "7"
