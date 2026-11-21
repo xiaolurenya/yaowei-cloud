@@ -1,6 +1,6 @@
 services:
   yaowei-cloud:
-    image: xiaoluya/yaowei-cloud-suite:5.0.13@sha256:f8ac4ab9f512e50faefd561e307a442720d4643d74e29928b40a8477041de06a
+    image: xiaoluya/yaowei-cloud-suite:v5.0.17@sha256:1bed3a81d7355c5f789b2f599bb7a7fa31ff9b3f054ebdb4c963e360e96dac3e
     container_name: yaowei-cloud
     restart: unless-stopped
     ports:
@@ -10,7 +10,6 @@ services:
     environment:
       TZ: Asia/Shanghai
       PORT: "80"
-      YAOWEI_LICENSE_ENDPOINT: "https://ywy.xlry.cc.cd"
       YAOWEI_LICENSE_SKU: "yaowei-cloud-suite"
       YAOWEI_LICENSE_OFFLINE_GRACE_DAYS: "7"
       YAOWEI_TRIAL_DAYS: "7"
