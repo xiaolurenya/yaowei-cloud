@@ -51,8 +51,8 @@ YAOWEI_LICENSE_ENDPOINT=https://yaowei-license-hub.435675554-57b.workers.dev
 
 - 版本：v5.0.3
 - 文件：`YaoWeiCloud-5.0.3-Feiniu.fpk`
-- 镜像 digest：`sha256:1558eb7523192e5041bc6b8458e4a9a39ab1c0d01e1516f3626bbdb7bd803235`
-- SHA256：`936ebfe9aac62c3650e1fdaeb8e4e334323b6c33bab156dca4969789f1b95084`
+- 镜像 digest：`sha256:937ed29578cbc76fcc6a7e4cc95f02443cd061501e1a4c98998fffb782e1c570`
+- SHA256：`(see Release asset SHA256)`
 - 下载：[GitHub Releases / v5.0.3](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.3)
 
 安装后访问 `http://设备IP:8899`。生产默认强制云端授权；仅内网演示可在 compose 中设置 `YAOWEI_LICENSE_ALLOW_LOCAL=1`。
