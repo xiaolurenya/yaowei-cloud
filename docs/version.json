@@ -3,13 +3,13 @@
   "image": "xiaoluya/yaowei-cloud-suite:5.0.3",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
   "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.3",
-  "digest": "sha256:1558eb7523192e5041bc6b8458e4a9a39ab1c0d01e1516f3626bbdb7bd803235",
+  "digest": "sha256:937ed29578cbc76fcc6a7e4cc95f02443cd061501e1a4c98998fffb782e1c570",
   "license_endpoint": "https://ywyt.xlry.cc.cd",
   "license_admin_path": "/admin",
   "persistence": "NAS 持久数据卷 /app/data/state.json + /api/state 自动保存/恢复；授权 token 不随业务数据导出",
   "security": "云端授权默认强制；局域网免授权默认关闭；导出/导入需授权；导出的账套不含授权 token",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T07:53:48.438Z",
-  "note": "曜维云 V5.0.3：业务数据 NAS 持久卷、授权域名切换、容器打开与绕过风险修复。"
+  "generatedAt": "2026-11-21T08:05:29.320Z",
+  "note": "曜维云 V5.0.3 最终版：业务数据 NAS 持久化、ywyt 自定义授权域名、登录页可配置、关闭绕过、导出导入授权门禁。"
 }
