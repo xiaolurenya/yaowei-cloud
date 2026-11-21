@@ -5,11 +5,15 @@ services:
     restart: unless-stopped
     ports:
       - "8899:80"
+    volumes:
+      - "${YAOWEI_DATA_DIR:-./data}:/app/data"
     environment:
-      YAOWEI_LICENSE_ENDPOINT: "https://yaowei-license-hub.435675554-57b.workers.dev"
+      TZ: Asia/Shanghai
+      YAOWEI_LICENSE_ENDPOINT: "https://ywyt.xlry.cc.cd"
       YAOWEI_LICENSE_SKU: "yaowei-cloud-suite"
       YAOWEI_LICENSE_OFFLINE_GRACE_DAYS: "7"
-      # 生产默认 false：所有设备必须逐台云端激活；仅本机演示可改为 1
       YAOWEI_LICENSE_ALLOW_LOCAL: "0"
       YAOWEI_LICENSE_REQUIRE_EXPORT: "1"
       YAOWEI_LICENSE_REQUIRE_IMPORT: "1"
+      YAOWEI_STATE_AUTOSAVE: "1"
+      YAOWEI_STATE_FILE: "/app/data/state.json"
