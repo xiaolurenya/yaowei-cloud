@@ -52,8 +52,8 @@
 ## 镜像与版本
 
 - Docker Hub：<https://hub.docker.com/r/xiaoluya/yaowei-cloud-suite>
-- 固定版本：`xiaoluya/yaowei-cloud-suite:v5.0.15`
-- 当前 digest：`sha256:fbeb02802805d2898f7cf2f021e70b354e4fc41eae3042b4cf034c6c8b30b6ae`
+- 固定版本：`xiaoluya/yaowei-cloud-suite:v5.0.16`
+- 当前 digest：`sha256:754820096b85d1355cfe4e5028a1835545e79680f6a95e160fa72537593882bf`
 - 默认端口：`8899`
 
 ---
@@ -65,7 +65,7 @@
 ```yaml
 services:
   yaowei-cloud:
-    image: xiaoluya/yaowei-cloud-suite:5.0.13@sha256:fbeb02802805d2898f7cf2f021e70b354e4fc41eae3042b4cf034c6c8b30b6ae
+    image: xiaoluya/yaowei-cloud-suite:5.0.13@sha256:754820096b85d1355cfe4e5028a1835545e79680f6a95e160fa72537593882bf
     container_name: yaowei-cloud
     restart: unless-stopped
     ports:
@@ -131,8 +131,8 @@ admin / admin123
 
 ## 飞牛 NAS 安装包
 
-- [GitHub Releases / v5.0.15](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.15)
-- 附件：`YaoWeiCloud-5.0.15-Feiniu.fpk`
+- [GitHub Releases / v5.0.16](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.16)
+- 附件：`YaoWeiCloud-5.0.16-Feiniu.fpk`
 - 安装向导可自定义访问端口，默认 `8899`
 - 业务数据保存到 `YaoWeiCloud/data/state.json`
 - 服务端授权备份保存到 `YaoWeiCloud/data/license-state.json`
