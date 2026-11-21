@@ -43,6 +43,17 @@ YAOWEI_LICENSE_ENDPOINT=https://yaowei-license-hub.435675554-57b.workers.dev
 ```
 首次进入「授权管理」输入授权码。
 
+
+## 飞牛 NAS 安装包
+
+- 版本：v5.0.2
+- 文件：`YaoWeiCloud-5.0.2-Feiniu.fpk`
+- 镜像 digest：`sha256:c86f66b1d3dd6e969327dd69b30174842834d907f19142537c45e5ab2c7c6869`
+- SHA256：`7879d2c53724480531bb696113f6de69d01bd574f5bc6244622214631bc188fa`
+- 下载：[GitHub Releases / v5.0.2](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.2)
+
+安装后访问 `http://设备IP:8899`。生产默认强制云端授权；仅内网演示可在 compose 中设置 `YAOWEI_LICENSE_ALLOW_LOCAL=1`。
+
 ## 功能
 - 经营驾驶舱 / 实时大屏
 - 报价配置清单、成本价、毛利、含税/不含税
