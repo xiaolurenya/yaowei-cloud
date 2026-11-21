@@ -1,0 +1,48 @@
+# 曜维云 · YaoWei Cloud
+
+> 把报价、合同、成本、库存、回款、现场工单和经营驾驶舱，装进一个弱电工程经营平台。
+
+本仓库是**公开介绍仓库**：项目说明、Docker Hub 镜像拉取、NAS 部署文档、授权连接说明。核心源码位于私有仓库 `yaowei-cloud-core`。
+
+## 镜像
+```text
+xiaoluya/yaowei-cloud-suite:latest
+```
+
+## 一键启动
+```bash
+chmod +x scripts/pull-and-run.sh
+./scripts/pull-and-run.sh
+```
+
+或：
+```bash
+docker compose up -d
+```
+
+访问：`http://localhost:8899` 或 `http://NAS的IP:8899`。
+
+## 授权
+局域网 / 127.0.0.1 / 192.168.x.x 默认离线可用。公网部署设置：
+```bash
+YAOWEI_LICENSE_ENDPOINT=https://license.your-domain.workers.dev
+```
+首次进入「授权管理」输入授权码。
+
+## 功能
+- 经营驾驶舱 / 实时大屏
+- 报价配置清单、成本价、毛利、含税/不含税
+- 合同范本库、逐行预览/打印
+- 回款凭证、财务台账
+- 采购入库、领料出库、移动加权成本
+- 真实成本利润核算
+- 导出中心：CSV / Excel / Word / JSON 账套
+- 消息中心勾选删除
+- 业务场景开关
+- 授权系统
+
+## 仓库划分
+| 仓库 | 可见性 | 内容 |
+|---|---|---|
+| yaowei-cloud | 公开 | 项目介绍、镜像拉取、部署脚本 |
+| yaowei-cloud-core | 私有 | 核心源码、Dockerfile、授权 Worker、CI |
