@@ -1,9 +1,9 @@
 {
-  "version": "5.0.5",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.5",
+  "version": "5.0.6",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.6",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.5",
-  "digest": "sha256:a044f4eef9f1ba91f452e1fb810a50953c55b79f9161e38125a41d978cc90d94",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.6",
+  "digest": "sha256:8cb5aabc6000bc24f4366025c6e0c0d571b52ff423ccdd7a05005578bd8ed993",
   "license_endpoint": "[built-in]",
   "license_admin_path": "[private]",
   "license_admin_password": "管理端使用独立密码登录；密码不写入公开仓/镜像",
@@ -12,6 +12,7 @@
   "publicConfig": "授权后台可配置价格与联系方式，前台授权弹窗打开时实时读取并在30秒轮询刷新",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T08:42:42.418Z",
-  "note": "曜维云 V5.0.5：移除公开文案中的授权后台地址，修复登录按钮点击，保留 NAS 持久卷、自定义端口和授权门禁。"
+  "generatedAt": "2026-11-21T09:09:56.475Z",
+  "note": "曜维云 V5.0.6：7天试用期、试用版禁止修改公司与登录页信息、授权弹窗可关闭、NAS持久卷。",
+  "trial": "7天服务端试用期；试用期可关闭授权窗口并使用业务功能"
 }
