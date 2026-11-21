@@ -13,10 +13,10 @@ xiaoluya/yaowei-cloud-suite:latest
 固定版本：
 
 ```text
-xiaoluya/yaowei-cloud-suite:v5.0.12
+xiaoluya/yaowei-cloud-suite:v5.0.13
 ```
 
-当前 digest：`sha256:f5c07acc79dbcecd1128167c1c9e74586c77e377eaeacee5a254eac772fc4a8c`
+当前 digest：`sha256:f8ac4ab9f512e50faefd561e307a442720d4643d74e29928b40a8477041de06a`
 
 ## 一键启动
 
@@ -37,10 +37,10 @@ docker compose up -d
 
 业务数据保存到 `YaoWeiCloud/data/state.json`，升级/重装容器不会删除；不要执行 `docker compose down -v`。
 
-- 版本：v5.0.12
-- 文件：`YaoWeiCloud-5.0.12-Feiniu.fpk`
-- 镜像 digest：`sha256:f5c07acc79dbcecd1128167c1c9e74586c77e377eaeacee5a254eac772fc4a8c`
-- 下载：[GitHub Releases / v5.0.12](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.12)
+- 版本：v5.0.13
+- 文件：`YaoWeiCloud-5.0.13-Feiniu.fpk`
+- 镜像 digest：`sha256:f8ac4ab9f512e50faefd561e307a442720d4643d74e29928b40a8477041de06a`
+- 下载：[GitHub Releases / v5.0.13](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.13)
 
 安装后访问 `http://设备IP:8899`。安装向导可自定义访问端口，默认 8899。
 
