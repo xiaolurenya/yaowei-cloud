@@ -1,14 +1,15 @@
 {
-  "version": "5.0.2",
-  "image": "xiaoluya/yaowei-cloud-suite:5.0.2",
+  "version": "5.0.3",
+  "image": "xiaoluya/yaowei-cloud-suite:5.0.3",
   "latest": "xiaoluya/yaowei-cloud-suite:latest",
-  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.2",
-  "digest": "sha256:c86f66b1d3dd6e969327dd69b30174842834d907f19142537c45e5ab2c7c6869",
-  "license_endpoint": "https://yaowei-license-hub.435675554-57b.workers.dev",
+  "v_tag": "xiaoluya/yaowei-cloud-suite:v5.0.3",
+  "digest": "sha256:1558eb7523192e5041bc6b8458e4a9a39ab1c0d01e1516f3626bbdb7bd803235",
+  "license_endpoint": "https://ywyt.xlry.cc.cd",
   "license_admin_path": "/admin",
+  "persistence": "NAS 持久数据卷 /app/data/state.json + /api/state 自动保存/恢复；授权 token 不随业务数据导出",
   "security": "云端授权默认强制；局域网免授权默认关闭；导出/导入需授权；导出的账套不含授权 token",
   "publicRepo": "https://github.com/xiaolurenya/yaowei-cloud",
   "privateRepo": "https://github.com/xiaolurenya/yaowei-cloud-core",
-  "generatedAt": "2026-11-21T07:20:22.956Z",
-  "note": "曜维云 V5.0.2：修复容器打开卡死、登录页可配置、关闭登录/授权绕过、导出导入授权门禁。"
+  "generatedAt": "2026-11-21T07:53:48.438Z",
+  "note": "曜维云 V5.0.3：业务数据 NAS 持久卷、授权域名切换、容器打开与绕过风险修复。"
 }
