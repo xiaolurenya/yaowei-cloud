@@ -2,7 +2,7 @@
 
 > 把报价、合同、成本、库存、回款、现场工单和经营驾驶舱，装进一个弱电工程经营平台。
 
-![版本](https://img.shields.io/badge/version-5.0.13-blue) ![类型](https://img.shields.io/badge/type-%E5%BC%B1%E7%94%B5%E5%B7%A5%E7%A8%8B%E7%BB%8F%E8%90%A5%E5%B9%B3%E5%8F%B0-orange) ![技术](https://img.shields.io/badge/stack-Node.js%20%2F%20SPA%20%2F%20Cloudflare%20Workers-green) ![端口](https://img.shields.io/badge/port-8899-lightgrey)
+![版本](https://img.shields.io/badge/version-v5.0.17-blue) ![类型](https://img.shields.io/badge/type-%E5%BC%B1%E7%94%B5%E5%B7%A5%E7%A8%8B%E7%BB%8F%E8%90%A5%E5%B9%B3%E5%8F%B0-orange) ![技术](https://img.shields.io/badge/stack-Node.js%20%2F%20SPA%20%2F%20Cloudflare%20Workers-green) ![端口](https://img.shields.io/badge/port-8899-lightgrey)
 
 曜维云是一套面向**弱电工程商、机电承包商、系统集成商和项目服务商**的本地化经营平台。它把经营驾驶舱、实时大屏、报价配置、合同文档、项目施工、采购库存、回款财务、成本利润、现场工单、业务场景、导出中心和授权系统整合为一套轻量私有部署方案。
 
@@ -52,8 +52,8 @@
 ## 镜像与版本
 
 - Docker Hub：<https://hub.docker.com/r/xiaoluya/yaowei-cloud-suite>
-- 固定版本：`xiaoluya/yaowei-cloud-suite:v5.0.16`
-- 当前 digest：`sha256:754820096b85d1355cfe4e5028a1835545e79680f6a95e160fa72537593882bf`
+- 固定版本：`xiaoluya/yaowei-cloud-suite:v5.0.17`
+- 当前 digest：`sha256:1bed3a81d7355c5f789b2f599bb7a7fa31ff9b3f054ebdb4c963e360e96dac3e`
 - 默认端口：`8899`
 
 ---
@@ -65,7 +65,7 @@
 ```yaml
 services:
   yaowei-cloud:
-    image: xiaoluya/yaowei-cloud-suite:5.0.13@sha256:754820096b85d1355cfe4e5028a1835545e79680f6a95e160fa72537593882bf
+    image: xiaoluya/yaowei-cloud-suite:v5.0.17@sha256:1bed3a81d7355c5f789b2f599bb7a7fa31ff9b3f054ebdb4c963e360e96dac3e
     container_name: yaowei-cloud
     restart: unless-stopped
     ports:
@@ -75,7 +75,6 @@ services:
     environment:
       TZ: Asia/Shanghai
       PORT: "80"
-      YAOWEI_LICENSE_ENDPOINT: "https://ywy.xlry.cc.cd"
       YAOWEI_LICENSE_SKU: "yaowei-cloud-suite"
       YAOWEI_LICENSE_OFFLINE_GRACE_DAYS: "7"
       YAOWEI_TRIAL_DAYS: "7"
@@ -131,8 +130,8 @@ admin / admin123
 
 ## 飞牛 NAS 安装包
 
-- [GitHub Releases / v5.0.16](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.16)
-- 附件：`YaoWeiCloud-5.0.16-Feiniu.fpk`
+- [GitHub Releases / v5.0.17](https://github.com/xiaolurenya/yaowei-cloud/releases/tag/v5.0.17)
+- 附件：`YaoWeiCloud-5.0.17-Feiniu.fpk`
 - 安装向导可自定义访问端口，默认 `8899`
 - 业务数据保存到 `YaoWeiCloud/data/state.json`
 - 服务端授权备份保存到 `YaoWeiCloud/data/license-state.json`
@@ -178,4 +177,4 @@ admin / admin123
 
 ---
 
-文档版本：5.0.13 · 默认 SKU 防护、独立 SKU 安全绑定、授权后台记录与设备管理、服务端授权备份。
+文档版本：v5.0.17 · 业务场景配置页即时入口、运行自检、内置授权配置、默认 SKU 防护与服务端授权备份。
